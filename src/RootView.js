@@ -24,7 +24,7 @@ export default class RootView extends Component {
             if (this.trackballControls !== null) {
                 this.trackballControls.update();
             }
-        }
+        };
     }
 
     render() {
@@ -54,17 +54,7 @@ export default class RootView extends Component {
                         far={1000}
                         position={this.cameraPosition}
                     />
-                    <mesh>
-                        <boxGeometry
-                            width={1}
-                            height={1}
-                            depth={1}
-                        />
-                        <meshBasicMaterial
-                            color={0x00ff00}
-                            wireframe={true}
-                        />
-                    </mesh>
+                    {this.props.meshs}
                 </scene>
             </React3>);
     }

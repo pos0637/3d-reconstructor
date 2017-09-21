@@ -14,7 +14,7 @@ export default class LeftView extends Component {
             if (this.trackballControls !== null) {
                 this.trackballControls.update();
             }
-        }
+        };
     }
 
     render() {
@@ -46,17 +46,7 @@ export default class LeftView extends Component {
                         far={100}
                         position={this.cameraPosition}
                     />
-                    <mesh>
-                        <boxGeometry
-                            width={1}
-                            height={1}
-                            depth={1}
-                        />
-                        <meshBasicMaterial
-                            color={0x00ff00}
-                            wireframe={true}
-                        />
-                    </mesh>
+                    {this.props.meshs}
                 </scene>
             </React3>);
     }
